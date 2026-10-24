@@ -1,0 +1,19 @@
+# This is a Spack Environment file.
+#
+# It describes a set of packages to be installed, along with
+# configuration settings.
+spack:
+  # add package specs to the `specs` list
+  specs:
+  - dealii
+  view: true
+  concretizer:
+    unify: true
+  repos:
+  - /mnt/nfs/epccfs/projects/z19/z19/lparisi/dealii/dealii/repos/local/spack_repo/local
+  packages:
+    hdf5:
+      buildable: false
+      externals:
+      - spec: hdf5@1.14.3.5+mpi %gcc@14.2
+        prefix: /opt/cray/pe/hdf5-parallel/1.14.3.5/GNU/12.2
